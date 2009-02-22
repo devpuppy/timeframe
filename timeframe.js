@@ -156,8 +156,8 @@ var Timeframe = Class.create({
         pair.value.addClassName('timeframe_field').addClassName(pair.key);
       else {
         var container = new Element('div', { id: pair.key + this.element.id + '_field_container' });
-        this.fields.set(pair.key, new Element('input', { id: this.element.id + '_' + pair.key + 'field', name: pair.key + 'field', type: 'text', value: '' }));
-        container.insert(new Element('label', { 'for': pair.key + 'field' }).update(pair.key));
+        this.fields.set(pair.key, new Element('input', { id: this.element.id + '_' + pair.key + 'field', name: pair.key, type: 'text', value: '' }));
+        container.insert(new Element('label', { 'for': this.element.id + '_' + pair.key + 'field' }).update(pair.key));
         container.insert(this.fields.get(pair.key));
         fieldset.insert(container);
       }
